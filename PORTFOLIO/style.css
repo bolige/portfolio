@@ -1,0 +1,456 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0px
+}
+body{
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    
+}
+
+
+/*aqui empieza la barra de navegacion*/
+
+.barra-navegacion{
+    background-color: white;
+    height: 70px;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.barra-navegacion li{
+    margin: 20px;
+}
+
+.menu-hamburguesa{
+    display: none;
+}
+
+.link-navegacion{
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    
+
+}
+
+.link-boton-violeta{
+    border-radius: 100px;
+    text-decoration: none;
+    background-color: rgb(73, 124, 219);
+    font-weight: 200;
+    height: 30px;
+    width: 250px;
+    padding: 14px;
+    color: whitesmoke;
+
+}
+
+.link-boton-violeta:hover{
+    background-color: rgb(168, 233, 168)
+}
+/*aqui termina barra de navegacion */
+
+/*aqui empieza presentacion e imagen*/
+
+.seccion-hola {
+    
+    height: 74vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 80px;
+    padding-top: 150px ;
+    background-color: rgb(181, 154, 224);
+
+}
+      
+    
+.texto-de-hola {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        
+    
+}
+    
+
+    
+.titulo {
+    font-size: 40px;
+        
+
+        
+}
+    
+.nombre {
+    color: #c2d6f7;
+    font-weight: 800;
+    font-size: 60px;
+    margin-top: 41px;
+    margin-bottom: 60px;
+}
+.informacion-texto {
+       
+    margin-bottom: 60px;
+}
+    
+
+.imagen-informacion{
+    height: 100%;
+    width: 105%;
+    justify-content: flex-end;
+   
+}
+ 
+/*aqui termina presentacion e imagen*/
+
+/*aqui comienza mis conocimientos*/
+
+.mis-conocimientos{
+    text-align: center;
+
+}
+
+.titulo-1{
+    font-weight: 900;
+    font-size: 45px;
+    margin-top: 50px;
+    
+    
+}
+
+.texto-de-parrafo{
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.3;
+    
+    
+}
+
+.contenedor{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+    
+.caja{
+    width: 150px;
+    height: 150px;
+    background-color:white ;
+    border: 1.5px solid  #a1b0f7;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+.imagen-conocimientos{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+/*aqui termina mis conocimientos*/
+
+/*inicio de frase inspiradora*/
+
+.frase-inspiradora{
+    background-color:	#00b1a8;
+    color:#6e389b ;
+    height: 90vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comilla{
+    font-family:  'passion one' , cursive;
+    font-size: 190px;
+    text-align: center;
+}
+
+.frase{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.autor{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/*aqui termina la frase inspiradora*/
+
+/*aqui comienza proyectos*/
+
+.titulo-proyectos{
+    font-weight: 900;
+    font-size: 45px;
+    margin-top: 50px;
+    text-align: center;
+   
+
+}
+.barra-proyectos{
+    height: 70px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.barra-proyectos li {
+    margin: 20px;
+    
+    
+    
+}
+
+.link-proyectos{
+    margin-right: 20px;
+    color: black;
+    text-decoration: none;
+
+}
+.link-boton-violeta{
+    border-radius: 100px;
+    text-decoration: none;
+    background-color: cornflowerblue;
+}
+
+.contenedor-proyectos{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+    
+.caja-proyectos{
+    width: 150px;
+    height: 167px;
+    background-color: rgb(250, 250, 250);
+    border: 1.5px solid  #a1b0f7;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.imagen-proyectos{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+} 
+    
+/*aqui termina proyectos*/
+
+/*aqui empieza footer*/
+
+    
+.footer{
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.final-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    list-style-type: none;
+    color: black;
+        
+}
+.footer li {
+    margin: 20px;
+    color: black
+        
+        
+}
+
+.iconos-footer{
+    margin-bottom: 50px;
+    list-style-type: none;
+    display: flex;
+         
+
+}
+.texto-footer{
+    margin-bottom: 50px;
+}
+
+/*aqui termina footer*/
+
+
+/* empieza media */
+
+
+@media (max-width: 600px) {
+    .barra-navegacion li{
+        display: none;
+        flex-wrap: wrap;
+        align-content: center;
+
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        margin-right: 20px;
+
+    }
+
+    .texto-de-hola, .seccion-hola{
+     flex-wrap: wrap;
+     width: 100%;
+     justify-content: center;
+     padding: 0;
+     align-items: center;
+    }
+
+    .titulo {
+        margin-top: 15px;
+    }
+
+    .link-boton-violeta {
+        width: 110px;
+    }
+
+    .nombre,  {
+        font-size: 40px;
+
+    }
+    .informacion-texto {
+        font-size: 15px;
+        max-width: 600px;
+    }
+
+    .imagen-informacion {
+        width: 105%;
+    
+    }
+
+     /* conocimientos*/
+
+    .mis-conocimientos{
+        flex-wrap: wrap;
+        height:  100%;
+
+    }
+
+    .contenedor{
+        flex-wrap: wrap;
+        height:  100%;
+
+    }
+
+     /* frase inspiradora*/
+   
+    .frase-inspiradora{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .frase {
+        font-size: 15px;
+        padding: 40px;
+    }
+
+
+
+/* proyectos*/
+    .proyectos{
+        flex-wrap: wrap;
+        
+    }
+
+/* footer*/
+    .footer {
+        flex-wrap: wrap;
+        
+
+    }
+    .navegacion-footer {
+        display: none;
+    }
+    .iconos-footer {
+        margin-top: 50px;
+        
+    }
+
+
+}
+
+@media(min-width: 600px) y (max-width:900px) {
+    
+    .barra-navegacion li{
+               
+        display: none;
+    } 
+
+    .menu-hamburguesa {
+        display: block;
+        margin-right: 20px;
+            
+    }
+    
+    
+    /*   presentacion */
+    
+    .seccion-hola {
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .nombre{
+    font-size: 50px;
+            
+    }
+    
+    
+    
+    /* conocimientos*/
+    
+    .contenedor {
+        
+        font-size: 18px;
+        font-weight: 700;
+        flex-wrap: wrap;
+        
+    }
+    
+    
+    /*  frase*/
+    
+    .frase-inspiradora {
+        font-size: 20px;
+        padding: 40px;
+    }
+}     
+    
+    
+
+
+
+ 
