@@ -29,6 +29,8 @@
                     <a class="link-boton-violeta" href="#contacto">CONTACTO</a>
                 </li>
 
+                <!-- Como estas usando un icono de font awesome pero no tenes el link al 
+                css de Font Awesome en tu <head>, este icono no se ve.  -->
                 <div class="menu-hamburguesa"><i class="fas fa-bars fa-2x"></i></div>
                 </li>
 
@@ -42,6 +44,8 @@
     <!--fin de la barra de navegacion-->
 
     <!--inicio de presentacion, saludo e imagen-->
+
+    <!-- "Hola" no es un buen nombre para esta seccion - no es descriptivo -->
     <section id="hola" class="seccion-hola">
         <div class="texto-de-hola">
             <h4 class="titulo">¡Hola! soy,</h4>
@@ -58,7 +62,7 @@
         </div>
 
         <div class="imagen-yane">
-            <img class="imagen-informacion" src="../imagenes ada/imagenperritoportfolio.jpg">
+            <img class="imagen-informacion" src="imagenes ada/imagenperritoportfolio.jpg">
 
         </div>
     </section>
@@ -70,7 +74,16 @@
 
         <div>
             <h1 class="titulo-1">Mis conocimientos</h1>
-            <!-- copie la frase y como escribirla  de una compañera por que no estaba segura-->
+            
+          <!-- No es buena idea usar <br> para darle saltos de linea al texto.     
+                estamos usando <br> para estilar el contenido, violando la regla de separación 
+                de responsabilidades entre CSS y HTML. 
+                CSS debe ser el único encargado de estilar nuestra web. 
+                En este caso, por ejemplo, podríamos poner cada línea dentro de un <span> y decirle en el 
+                CSS a .frase: display: flex; flex-direction: column;. 
+                De esta manera nos aseguramos de que el HTML sólo de estructura, y el CSS el estilado -->
+          
+                <!-- copie la frase y como escribirla  de una compañera por que no estaba segura-->
             <h3 class="texto-de-parafo">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Beatae eaque
                 neque molestias <br>consequuntur vel ab quas architecto.</h3>
         </div>
@@ -78,17 +91,20 @@
         <div class="contenedor">
 
             <div class="caja">
-                <img class="imagen-conocimientos" src="../clase 6/6.png">
+
+                <!-- Como esta carpeta es externa, no esta en tu proyecto de github, 
+                no puedo ver estas imagenes.  -->
+                <img class="imagen-conocimientos" src="clase 6/6.png">
                 <p>HTML 5</p>
             </div>
 
             <div class="caja">
-                <img class="imagen-conocimientos" src="../clase 6/5.png">
+                <img class="imagen-conocimientos" src="clase 6/5.png">
                 <p>CSS 3</p>
             </div>
 
             <div class="caja">
-                <img clas="imagen-conocimientos" src="../clase 6/4.png">
+                <img clas="imagen-conocimientos" src="clase 6/4.png">
                 <P>SasS</P>
             </div>
 
@@ -96,17 +112,17 @@
 
         <div class="contenedor">
             <div class="caja">
-                <img class="imagen-conocimientos" src="../clase 6/3.png">
+                <img class="imagen-conocimientos" src="clase 6/3.png">
                 <P>JavaScript</P>
             </div>
 
             <div class="caja">
-                <img class="imagen-conocimientos" src="../clase 6/2.png">
+                <img class="imagen-conocimientos" src="clase 6/2.png">
                 <p>React</p>
             </div>
 
             <div class="caja">
-                <img class="imagen-conocimientos" src="../clase 6/1.png">
+                <img class="imagen-conocimientos" src="clase 6/1.png">
                 <p>GIT</p>
             </div>
 
@@ -119,6 +135,14 @@
 
     <seccion class="frase-inspiradora">
         <div class="comilla">
+
+<!-- No tenes por qué saber esto, asi que no lo tomo como correccion sino solo como comentario:
+no es buena practica usar texto para elementos decorativos, como lo es la comilla en este caso. 
+Los lectores de pantalla, las herramientas que usan las personas no-videntes para 
+recorrer nuestra web, necesitan los elementos de texto para leerle a los usuarios. 
+Si usamos texto para decorar, el lector de pantalla va a leerlo y va a confundir a nuestro
+usuario. En este caso, es mucho mejor utilizar un icono o una imagen.  -->
+
             <span>"</span>
         </div>
 
@@ -139,6 +163,11 @@
         </div>
         <nav>
             <ul class="barra-proyectos">
+
+<!-- No es algo que haya mencionado mucho asi que no cuenta como correccion sino como comentario:
+estos no deberian ser <a>, ya que no son links, no van a llevarnos a ningun lugar cuando
+la pagina este terminada. Son botones, ya que su objetivo va a ser filtrar los distintos
+proyectos, por lo que su etiqueta deberia ser <button> -->
                 <li>
                     <a class="link-boton-violeta" href="#about">TODOS</a>
                 </li>
@@ -146,6 +175,8 @@
                     <a class="link-proyectos" href="#about">HTML/CSS</a>
                 </li>
                 <li>
+                    <!-- Aqui escribiste "proyetos" en lugar de "proyectos" y en consecuencia
+                    los estilos no se le estan aplicando a la palabra JavaScript -->
                     <a class="link-proyetos" href="#about">JavaScript</a>
                 </li>
                 <li>
@@ -155,21 +186,22 @@
             </ul>
         </nav>
 
+        <!-- Repasa la clase 11 para ver como hacer esto sin los divs contenedor-proyectos -->
         <div class="contenedor-proyectos">
 
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/undraw_Portfolio_update_re_jqnp.png">
+                <img class="imagen-proyectos" src="imagenes ada/undraw_Portfolio_update_re_jqnp.png">
                 <p>PORTFOLIO</p>
             </div>
 
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/tienda.png">
+                <img class="imagen-proyectos" src="imagenes ada/tienda.png">
 
                 <p>TIENDA</p>
             </div>
 
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/juego de memoria.png">
+                <img class="imagen-proyectos" src="imagenes ada/juego de memoria.png">
                 <P>JUEGO DE MEMORIA</P>
             </div>
 
@@ -177,24 +209,24 @@
 
         <div class="contenedor-proyectos">
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/controlador de gastos.png">
+                <img class="imagen-proyectos" src="imagenes ada/controlador de gastos.png">
                 <P>CONTROLADOR DE GASTOS</P>
             </div>
 
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/undraw_calendar_dutt.png">
+                <img class="imagen-proyectos" src="imagenes ada/undraw_calendar_dutt.png">
                 <p>ADMINISTRADOR DE REUNIONES</p>
             </div>
 
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/undraw_Mobile_app_p3ts.png">
+                <img class="imagen-proyectos" src="imagenes ada/undraw_Mobile_app_p3ts.png">
                 <p>TODO APP</p>
             </div>
         </div>
 
         <div class="contenedor-proyectos">
             <div class="caja-proyectos">
-                <img class="imagen-proyectos" src="../imagenes ada/buscador de peliculasundraw_home_cinema_l7yl.png">
+                <img class="imagen-proyectos" src="imagenes ada/buscador de peliculasundraw_home_cinema_l7yl.png">
                 <p>BUSCADOR DE PELICULAS</p>
             </div>
 
@@ -231,18 +263,18 @@
             <ul class="iconos-footer" id="contacto">
                 <li>
                     <a href="https://www.facebook.com/yaneri.bolige">
-                        <img src="../imagenes ada/icons8-facebook-64 (1).png">
+                        <img src="imagenes ada/icons8-facebook-64 (1).png">
                     </a>
                 </li>
 
                 <li>
                     <a href="https://www.instagram.com/ro.bolige/">
-                        <img src="../imagenes ada/icons8-instagram-64 (1).png">
+                        <img src="imagenes ada/icons8-instagram-64 (1).png">
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/bolige">
-                        <img src="../imagenes ada/icons8-github-64.png">
+                        <img src="imagenes ada/icons8-github-64.png">
                     </a>
                 </li>
 

@@ -15,6 +15,8 @@ body{
 /*aqui empieza la barra de navegacion*/
 
 .barra-navegacion{
+    /* No es necesario darle color blanco a la barra de navegacion, ya que tiene
+    este color de fondo por heredarlo del body */
     background-color: white;
     height: 70px;
     display: flex;
@@ -46,6 +48,8 @@ body{
     text-decoration: none;
     background-color: rgb(73, 124, 219);
     font-weight: 200;
+
+    /* los a son elementos en linea, asi que no le prestan atencion ni a height ni a width */
     height: 30px;
     width: 250px;
     padding: 14px;
@@ -64,10 +68,15 @@ body{
     
     height: 74vh;
     display: flex;
+    /* no es necesario agregar flex direction row ya que se pone por defecto */
     flex-direction: row;
     align-items: center;
-    padding-left: 80px;
-    padding-top: 150px ;
+
+    /* Aqui usaste padding left y top para acomodar los elementos. No creo que sea
+    la mejor solucion: hubiera sido preferible que lo resolvieras con flex
+    diciendo justify-content: center y align-items: center */
+    /* padding-left: 80px;
+    padding-top: 150px ; */
     background-color: rgb(181, 154, 224);
 
 }
@@ -106,8 +115,15 @@ body{
     
 
 .imagen-informacion{
+
+    /* Tu imagen se ve deformada, porque la estas obligando a tener un tamaño que ella
+    no tiene naturalmente. Siempre es preferible decirle width: 100% y height: auto. 
+    Si la imagen no se ve en el lugar que la esperas, hay que corregirlo con flex 
+    (en el contenedor de la imagen), pero no modificar su tamaño.  */
     height: 100%;
     width: 105%;
+
+    /* Esta orden no se aplica porque las ordenes de flex van en el elemento contenedor */
     justify-content: flex-end;
    
 }
@@ -182,6 +198,7 @@ body{
 .comilla{
     font-family:  'passion one' , cursive;
     font-size: 190px;
+    /* no es necesario text align center ya que ya estas centrando esto con flex */
     text-align: center;
 }
 
@@ -230,6 +247,9 @@ body{
     text-decoration: none;
 
 }
+
+/* Esto no es necesario, ya que los estilos de .link-boton-violeta
+estan definidos mas arriba */
 .link-boton-violeta{
     border-radius: 100px;
     text-decoration: none;
@@ -258,6 +278,8 @@ body{
 }
 
 .imagen-proyectos{
+    /* No es buena practica darle un ancho y alto fijo a las imagenes, sino que es mejor
+    darle un alto y ancho fijo a su contenedor y a ellas decirles width: 100% */
     width: 100px;
     height: 100px;
     margin-bottom: 50px;
@@ -311,16 +333,44 @@ body{
 @media (max-width: 600px) {
     .barra-navegacion li{
         display: none;
+
+        /* si no se van a mostrar, porque tienen display none, no tiene sentido
+        agregarles otros estilos.  */
         flex-wrap: wrap;
         align-content: center;
 
     }
 
     .menu-hamburguesa {
+        /* esto esta correcto: no se ve porque falta el link a font awesome en el html */
         display: block;
         margin-right: 20px;
 
     }
+
+    
+    /* esta seccion se ve mal en mobile porque .seccion-hola tiene un height de 74vh
+    en desktop, que se arrastra a mobile y no alcanza. 
+    Habria que agregarle height: auto para que todo entre comodamente 
+    
+    Creo que fue un error unir los estilos de seccion-hola y texto-de-hola aqui, 
+    ya que queremos que hagan cosas muy distintas. Yo los corregiria asi: 
+    
+    .seccion-hola {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .texto-de-hola {
+        height: auto;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .imagen-informacion {
+        width: 100%;
+        height: auto;
+    } */
 
     .texto-de-hola, .seccion-hola{
      flex-wrap: wrap;
@@ -338,7 +388,7 @@ body{
         width: 110px;
     }
 
-    .nombre,  {
+    .nombre  {
         font-size: 40px;
 
     }
@@ -348,18 +398,24 @@ body{
     }
 
     .imagen-informacion {
+        /* la imagen se ve mal porque necesita un height auto y un width de 100% 
+        (si le ponemos 105 va a ser mas grande que la pantalla del celular!) */
         width: 105%;
     
     }
 
      /* conocimientos*/
 
+     /* ninguno de estos dos estilos es necesario */
     .mis-conocimientos{
         flex-wrap: wrap;
+
+        /* para que se vea bien deberia ser height: auto, no height: 100% */
         height:  100%;
 
     }
 
+    /* ninguno de estos dos estilos es necesario */
     .contenedor{
         flex-wrap: wrap;
         height:  100%;
@@ -367,7 +423,8 @@ body{
     }
 
      /* frase inspiradora*/
-   
+ 
+         /* ninguno de estos dos estilos es necesario */
     .frase-inspiradora{
         flex-wrap: wrap;
         width: 100%;
@@ -380,6 +437,7 @@ body{
 
 
 /* proyectos*/
+/* no es necesario el flex wrap aqui, pero si en .contenedor-proyectos */
     .proyectos{
         flex-wrap: wrap;
         
@@ -402,6 +460,8 @@ body{
 
 }
 
+/* aqui deberia decir and en lugar de y. Ninguno de los estilos de esta media query se
+esta aplicando por este error */
 @media(min-width: 600px) y (max-width:900px) {
     
     .barra-navegacion li{
